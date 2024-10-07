@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Player demo</title>
+    <link rel="stylesheet" href="../dist/css/player.css">
+    <style>
+        .wrap {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <video id="video" src="video.mp4" poster="video.png" controls muted></video>
+    </div>
+    
+
+    <script src="../dist/js/player.js"></script>
+    <script>
+        var player = Player('video', {
+            // source: 'video.mp4',
+            // poster: 'video.png',
+            // autoplay: true,
+            // muted: true
+        });
+        player.on('play', function(){
+            console.log('play start...')
+        });
+    </script>
+</body>
+</html>
